@@ -12,7 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        loader: '../../', // vue-template-loader
+        loader: '../../', // vue-tpl-loader
         options: {
           scoped: true
         }

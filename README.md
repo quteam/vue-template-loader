@@ -1,4 +1,4 @@
-# vue-template-loader
+# vue-tpl-loader
 
 Vue.js 2.0 template loader for webpack
 
@@ -17,13 +17,13 @@ In most cases, [vue-loader](https://github.com/vuejs/vue-loader) is recommended 
 
 ### Loading a Html Template
 
-Add vue-template-loader as a loader to your webpack configuration.
+Add vue-tpl-loader as a loader to your webpack configuration.
 
 ```js
 module.exports = {
   module: {
     rules: [
-      { test: /\.html$/, use: 'vue-template-loader' }
+      { test: /\.html$/, use: 'vue-tpl-loader' }
     ]
   }
 }
@@ -39,7 +39,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        loader: 'vue-template-loader',
+        loader: 'vue-tpl-loader',
         options: {
           transformToRequire: {
             // The key should be an element name
@@ -69,10 +69,10 @@ For an explanation of scoped styles, see the [vue-loader docs](https://vue-loade
 Html and style files need to be imported using `import withRender from './app.html?style=./app.css'`.
 
 You also need modify your webpack config as follows:
-- Set `scoped: true` in the vue-template-loader options
+- Set `scoped: true` in the vue-tpl-loader options
 - Mark some of your style loaders (usually `style-loader` and `css-loader`) as post-loaders (by setting `enforce: 'post'`).
 
-**Logic for what to mark as a post-loader:** vue-template-loader injects an _inline_ webpack loader into your loader pipeline to modify your style files to include [scope-id] selectors. Webpack loaders run in the order normal -> inline -> post, so any loaders you want to run before the inline loader should be normal loaders, and anything you want to run after the inline loader should be post loaders (i.e. marked with `enforce: 'post'`).
+**Logic for what to mark as a post-loader:** vue-tpl-loader injects an _inline_ webpack loader into your loader pipeline to modify your style files to include [scope-id] selectors. Webpack loaders run in the order normal -> inline -> post, so any loaders you want to run before the inline loader should be normal loaders, and anything you want to run after the inline loader should be post loaders (i.e. marked with `enforce: 'post'`).
 
 Typically you will want to leave loaders that compile to css (like less, sass and postcss transpilers) as normal loaders, so they run before the [scope-id] injection. Loaders that transform css into a format for webpack consumption (like `style-loader` and `css-loader`) should be post loaders (marked as `enforce: 'post'`).
 
@@ -138,7 +138,7 @@ For an explanation of CSS modules, see the [vue-loader docs](https://vue-loader.
 
 Html and style files need to be imported using the loader syntax: `import withRender from './app.html?style=./app.css'`. You also need to enable the `modules` flag of `css-loader`.
 
-vue-template-loader will add the `$style` property to your view model and you can use hashed classes through it.
+vue-tpl-loader will add the `$style` property to your view model and you can use hashed classes through it.
 
 ```js
 module.exports = {
@@ -146,7 +146,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: 'vue-template-loader'
+        use: 'vue-tpl-loader'
       },
       {
         test: /\.css$/,
@@ -173,7 +173,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        loader: 'vue-template-loader',
+        loader: 'vue-tpl-loader',
         options: {
           hmr: false // disables Hot Modules Replacement
         }
@@ -250,11 +250,11 @@ declare module '*.html' {
 }
 ```
 
-## Templates
+## Thanks
 
-There is vue-cli template using vue-template-loader (Thanks to @Toilal).
+This project form vue-template-loader, Thanks to @ktsn.
 
-- [Toilal/vue-webpack-template](https://github.com/Toilal/vue-webpack-template)
+- [ktsn/vue-webpack-template](https://github.com/ktsn/vue-template-loader)
 
 ## License
 

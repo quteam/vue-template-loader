@@ -60,7 +60,7 @@ function load (data, options) {
   return requireFromString(loadCode(data, options).code)
 }
 
-describe('vue-template-loader', () => {
+describe('vue-tpl-loader', () => {
   it('renders static element', () => {
     const withRender = load('<div><p>hi</p></div>')
     const options = withRender({})

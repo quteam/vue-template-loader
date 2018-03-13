@@ -23,7 +23,7 @@ module.exports = {
         test: /\.pug$/,
         use: [
           {
-            loader: '../../', // vue-template-loader
+            loader: '../../', // vue-tpl-loader
             options: {
               scoped: true,
               transformToRequire: {

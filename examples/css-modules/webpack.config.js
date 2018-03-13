@@ -12,7 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: '../../' // vue-template-loader
+        use: '../../' // vue-tpl-loader
       },
       {
         test: /\.css$/,
