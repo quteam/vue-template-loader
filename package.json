@@ -1,6 +1,6 @@
 {
   "name": "vue-tpl-loader",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Vue.js 2.0 template loader for webpack",
   "main": "lib/template-loader.js",
   "files": [
@@ -33,7 +33,7 @@
     "loader-utils": "^1.1.0",
     "postcss": "^6.0.22",
     "postcss-selector-parser": "^3.1.1",
-    "source-map": "^0.7.3",
+    "source-map": "^0.6.1",
     "vue-hot-reload-api": "^2.3.0",
     "vue-template-es2015-compiler": "^1.6.0"
   },
